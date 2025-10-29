@@ -4,6 +4,7 @@ import { NavMain } from "@/components/nav/nav-main";
 import { NavUser } from "@/components/nav/nav-user";
 import { useAuth } from "@/services/auth/session";
 import * as React from "react";
+import { MENU } from "@/components/nav/items";
 import {
   SidebarMenuButton,
   SidebarMenuItem,
@@ -13,26 +14,6 @@ import {
   SidebarMenu,
   Sidebar,
 } from "@/components/ui/sidebar";
-import {
-  IconDashboard,
-  IconUsers,
-} from "@tabler/icons-react";
-
-const MENU = {
-  user: [],
-  admin: [
-    {
-      title: "Dashboard",
-      url: "/dashboard",
-      icon: IconDashboard,
-    },
-    {
-      title: "Usuários/Clientes",
-      url: "/dashboard/users",
-      icon: IconUsers,
-    },
-  ]
-} as any;
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { user } = useAuth();
