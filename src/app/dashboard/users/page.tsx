@@ -1,6 +1,6 @@
 "use client";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { userColumns, userFields, userFormSchema } from "@/models/user/utils";
+import { userColumns, userFields, userFormSchema } from "@/models/identity/user/utils";
 import { ModalForm, ModalFormProvider, TableView } from "@discovery-solutions/struct/client";
 import { SiteHeader } from "@/components/site-header";
 import { useState } from "react";

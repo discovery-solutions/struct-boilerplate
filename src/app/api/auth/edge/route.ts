@@ -1,7 +1,7 @@
 import { startConnection } from "@/lib/mongoose";
 import { ModelService } from "@/struct";
 import { NextRequest } from "next/server";
-import { User } from "@/models/user/model";
+import { User } from "@/models/identity/user/model";
 import { ENV } from "@/env";
 
 export const POST = async (req: NextRequest) => {

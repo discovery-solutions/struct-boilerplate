@@ -1,12 +1,12 @@
 "use client";
 import { FieldInterface } from "@discovery-solutions/struct/client";
-import { UserInterface } from "@/models/user";
+import { UserInterface } from "@/models/identity/user";
 import { ColumnDef } from "@tanstack/react-table";
 import { TagsView } from "@/components/tags-view";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
-export * from "@/models/user";
+export * from "@/models/identity/user";
 
 export const ROLES = {
   admin: "Administrador",

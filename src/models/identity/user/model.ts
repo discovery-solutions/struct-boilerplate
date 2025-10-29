@@ -1,7 +1,7 @@
 import { db, Schema } from "@/lib/mongoose";
-import { UserInterface } from "@/models/user";
+import { UserInterface } from "@/models/identity/user";
 
-export * from "@/models/user";
+export * from "@/models/identity/user";
 
 const schema = new Schema<UserInterface>({
   name: { type: String, required: true },

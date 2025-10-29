@@ -1,6 +1,6 @@
 import { startOfMonth, subMonths } from "date-fns";
 import { withSession } from "@/struct";
-import { User } from "@/models/user/model";
+import { User } from "@/models/identity/user/model";
 
 export const GET = withSession(async () => {
   const now = new Date();

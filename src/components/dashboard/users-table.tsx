@@ -1,5 +1,5 @@
 "use client";
-import { userDashboardColumns, userFields, userFormSchema } from "@/models/user/utils";
+import { userDashboardColumns, userFields, userFormSchema } from "@/models/identity/user/utils";
 import { ModalForm, ModalFormProvider, TableView, useModalForm } from "@discovery-solutions/struct/client";
 
 export const UsersTable = () => {

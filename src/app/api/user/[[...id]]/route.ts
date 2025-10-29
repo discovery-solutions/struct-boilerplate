@@ -1,4 +1,4 @@
-import { User, userFormSchema, UserInterface } from "@/models/user/model";
+import { User, userFormSchema, UserInterface } from "@/models/identity/user/model";
 import { CRUDController, HookContext } from "@/struct";
 import { AuthService } from "@/services/auth";
 

@@ -1,5 +1,5 @@
 import { CustomSession } from "@/services/auth/utils";
-import { UserInterface } from "@/models/user";
+import { UserInterface } from "@/models/identity/user";
 import { fetcher } from "@discovery-solutions/struct";
 import { ENV } from "@/env";
 

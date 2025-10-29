@@ -1,6 +1,6 @@
 import { withSession } from "@/struct";
 import { signOut } from "@/auth";
-import { User } from "@/models/user/model";
+import { User } from "@/models/identity/user/model";
 
 export const GET = withSession(async ({ user }) => {
   const original = await User.findOne({ email: user?.email });

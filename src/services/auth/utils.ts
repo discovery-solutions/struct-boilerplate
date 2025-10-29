@@ -1,4 +1,4 @@
-import { UserInterface } from "@/models/user";
+import { UserInterface } from "@/models/identity/user";
 import { Session } from "next-auth";
 import { z } from "zod";
 
