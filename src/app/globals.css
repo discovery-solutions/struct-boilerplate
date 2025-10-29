@@ -1,0 +1,166 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@source "../../node_modules/@discovery-solutions/struct";
+
+@custom-variant light (&:is(.light *));
+
+@theme inline {
+  --color-orange: #E1703C;
+  --color-yellow: #E6A93B;
+  --color-teal: #4A9999;
+  --color-green: #6E935A;
+  --color-beige: #FFF0D3;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-spectral);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* === Base / Estrutura === */
+  --background: #1C1C1C;
+  /* Fundo escuro neutro — base DSCVR */
+  --foreground: oklch(0.95 0.02 95);
+  /* Texto claro e suave */
+  --radius: 0.625rem;
+
+  /* === Brand Core === */
+  --primary: #F4F4F4;
+  /* Branco suave — foco e contraste */
+  --primary-foreground: oklch(0.16 0.02 270);
+  /* Texto em botões primários escuros */
+
+  --secondary: oklch(0.22 0.02 270);
+  /* Superfícies secundárias (cards, seções) */
+  --secondary-foreground: oklch(0.9 0.02 95);
+  /* Texto em superfícies secundárias */
+
+  /* === Accent / Intelectual Blue === */
+  --accent: oklch(0.72 0.06 200);
+  /* Azul petróleo — inteligência e calma */
+  --accent-foreground: oklch(0.98 0.01 95);
+
+  /* === States === */
+  --muted: oklch(0.25 0.02 270);
+  /* Elementos desativados */
+  --muted-foreground: oklch(0.65 0.03 95);
+  /* Texto desativado */
+  --destructive: oklch(0.55 0.17 25);
+  /* Vermelho queimado, sofisticado */
+
+  /* === Elements === */
+  --border: oklch(0.25 0.02 270);
+  --input: oklch(0.22 0.02 270);
+  --ring: oklch(0.78 0.14 80);
+  /* Realce dourado-suave (destaques interativos) */
+
+  /* === Data / Charts === */
+  --chart-1: oklch(0.72 0.12 80);
+  /* Dourado suave */
+  --chart-2: oklch(0.68 0.1 180);
+  /* Azul profundo */
+  --chart-3: oklch(0.56 0.09 260);
+  /* Roxo sutil */
+  --chart-4: oklch(0.8 0.1 120);
+  /* Verde oliva */
+  --chart-5: oklch(0.85 0.15 50);
+  /* Âmbar claro */
+
+  /* === Sidebar / Layout === */
+  --sidebar: #191A1B;
+  --sidebar-foreground: oklch(0.95 0.02 95);
+  --sidebar-primary: oklch(0.78 0.14 80);
+  --sidebar-primary-foreground: oklch(0.16 0.02 270);
+  --sidebar-accent: oklch(0.25 0.02 270);
+  --sidebar-accent-foreground: oklch(0.9 0.02 95);
+  --sidebar-border: oklch(0.25 0.02 270);
+  --sidebar-ring: oklch(0.78 0.14 80);
+
+  /* === Popover / Modal === */
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+}
+
+/* === Tema Claro === */
+.light {
+  --background: #FFFFFF;
+  --foreground: oklch(0.16 0.02 270);
+  --primary: oklch(0.68 0.14 80);
+  --primary-foreground: oklch(0.98 0.01 95);
+  --secondary: oklch(0.9 0.02 95);
+  --secondary-foreground: oklch(0.25 0.02 270);
+  --accent: oklch(0.7 0.06 200);
+  --accent-foreground: oklch(0.1 0.02 270);
+  --border: oklch(0.88 0.02 270);
+  --input: oklch(0.88 0.02 270);
+  --sidebar: #f5f5f5;
+  --sidebar-foreground: #131313;
+  --muted: #e9e9e9;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-sidebar text-foreground;
+  }
+}
+
+.scroll-hidden,
+.overflow-auto,
+.overflow-y-auto,
+.overflow-x-auto,
+.overflow-y-scroll,
+.overflow-x-scroll {
+
+  /* For Chrome, Safari, Opera (WebKit-based browsers) */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For Firefox */
+  scrollbar-width: none;
+
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100dvw;
+}
