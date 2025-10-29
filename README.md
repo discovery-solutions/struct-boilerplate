@@ -298,5 +298,3 @@ Se achar que há um potencial problema na interface (UI) ou em outra funcionalid
 - Dev: `pnpm dev`
 - Build: `pnpm build && pnpm start`
 - Lint: `pnpm lint`
-
-Precisa que eu inclua exemplos de código dos handlers de auth (magic link + Google) e do endpoint `/api/upload` neste README? Posso adicionar se quiser que o README sirva também como “guia copiável” da implementação. Também posso gerar um “.env.example” pronto.
