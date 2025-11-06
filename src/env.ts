@@ -11,6 +11,8 @@ export const envSchema = z.object({
   AUTH_GOOGLE_SECRET: z.string().optional(),
   OPENAI_API_KEY: z.string().min(32),
   BLOB_READ_WRITE_TOKEN: z.string().optional(),
+  NEXT_PUBLIC_APP_NAME: z.string(),
+  NEXT_PUBLIC_APP_URL: z.string(),
 });
 
 export type Env = z.infer<typeof envSchema>;

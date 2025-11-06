@@ -10,7 +10,7 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  title: "DSCVR",
+  title: ENV.NEXT_PUBLIC_APP_NAME,
   description:
     "O ecossistema de Inteligência Aplicada que conecta pessoas, ideias e ferramentas para transformar conceitos em realidade. Crie, valide, comunique e monetize com eficiência e autonomia.",
   keywords: [
